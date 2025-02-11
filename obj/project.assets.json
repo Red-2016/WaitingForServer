@@ -6571,9 +6571,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\19785\\Desktop\\WaitingForServer\\TutorialWeb.csproj",
-      "projectName": "TutorialWeb",
-      "projectPath": "C:\\Users\\19785\\Desktop\\WaitingForServer\\TutorialWeb.csproj",
+      "projectUniqueName": "C:\\Users\\19785\\Desktop\\WaitingForServer\\WebAppWaitingForServer.csproj",
+      "projectName": "WebAppWaitingForServer",
+      "projectPath": "C:\\Users\\19785\\Desktop\\WaitingForServer\\WebAppWaitingForServer.csproj",
       "packagesPath": "C:\\Users\\19785\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\19785\\Desktop\\WaitingForServer\\obj\\",
       "projectStyle": "PackageReference",
