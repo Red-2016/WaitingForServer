@@ -1,0 +1,110 @@
+﻿@{
+    Layout = "_LayoutWithoutFooter";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmojiTranslation</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+    <link rel="stylesheet" href="~/css/EmojiTranslationStyles.css">
+</head>
+<style>
+    input {
+        padding: 12px;
+        width: 80%;
+        margin-bottom: 17px;
+        border: 1px solid #ccc;
+        border-radius: 18px;
+        font-size: 1em;
+        color: black;
+        background-color: white;
+    }
+
+    button.rounded-button {
+        background-color: #ff8000;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 1em;
+        border-radius: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        margin-bottom: 20px;
+    }
+
+        button.rounded-button:hover {
+            background-color: #ff3300;
+            transform: scale(1.05);
+        }
+
+    .result {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .copy-button {
+        background-color: #4a4a4a;
+        color: white;
+        border: none;
+        padding: 12px 15px;
+        font-size: 1em;
+        border-radius: 18px;
+        cursor: pointer;
+        display: none;
+        margin-top: 10px;
+    }
+
+        .copy-button:hover {
+            background-color: #666;
+            transform: scale(1.05);
+        }
+</style>
+<body>
+
+    <div class="content">
+        <h2 class="content-title">想说的东西难以开口？把它翻译成Emoji!</h2>
+        <br>
+        <input type="text" id="inputText" placeholder="说什么?......">
+        <button class="rounded-button" id="generateButton">生成</button>
+        <div class="result" id="emojiResult"></div>
+        <button class="copy-button" id="copyButton">复制</button>
+    </div>
+
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var apiUrl = '@Url.Action("GenerateEmoji", "Home")';
+
+        $('#generateButton').click(function() {
+            var inputText = $('#inputText').val();
+
+            if (inputText.trim() === "") {
+                $('#emojiResult').text("😅?");
+                return;
+            }
+
+            $.ajax({
+                url: apiUrl,
+                type: 'POST',
+                data: { inputText: inputText },
+                success: function(response) {
+                    if(response.result) {
+                        $('#emojiResult').text(response.result);
+                        $('#copyButton').show();
+                    } else {
+                        $('#emojiResult').text('无法生成结果，请重试');
+                    }
+                },
+                error: function(error) {
+                    console.error('Error:', error);
+                    $('#emojiResult').text('发生错误，请稍后再试');
+                }
+            });
+        });
+    });
+</script>

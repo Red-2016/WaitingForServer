@@ -1,0 +1,186 @@
+﻿body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #27262b;
+}
+
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #27262b;
+    color: white;
+    padding: 10px 60px;
+    border-bottom: 1px solid #4a4a4a;
+    font-family: 'Microsoft YaHei', sans-serif;
+    font-size: 1.3em;
+    height: 60px;
+}
+
+    nav.navbar a {
+        color: white;
+        text-decoration: none;
+    }
+
+    nav.navbar .right-links {
+        margin-left: auto;
+        display: flex; /* 使用flex布局 */
+        gap: 25px; /* 设置间隔 */
+        gap: 25px; /* 设置间隔 */
+    }
+
+
+div.content {
+    margin: 20px auto 100px;
+    padding: 20px;
+    background-color: #27262b;
+    border: 1px solid #27262b;
+    color: white;
+    max-width: 1000px;
+    width: 50%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.content-image {
+    width: 100%;
+    border-radius: 22px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 130px;
+}
+
+.image-container {
+    margin-top: 60px;
+    text-align: center;
+}
+
+    .image-container img {
+        width: 90%;
+        border-radius: 22px;
+        height: auto;
+    }
+
+.content-title h1 {
+    font-size: 2em;
+    font-family: 'Microsoft YaHei', Courier, monospace;
+    line-height: 0.5em;
+}
+
+a {
+    color: white;
+    text-decoration-line: underline;
+    font-size: 0.9em;
+}
+
+button.rounded-button {
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 60px;
+}
+
+    button.rounded-button:hover {
+        background-color: #666;
+        transform: scale(1.05);
+    }
+
+footer.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #27262b;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-top: 1px solid #4a4a4a;
+    justify-content: center;
+    font-family: 'Microsoft YaHei', Courier, monospace;
+    letter-spacing: 1.5px;
+}
+
+div.footer-left {
+    text-align: left;
+    margin-right: 30px;
+    flex: 1;
+    max-width: 300px;
+}
+
+div.footer-right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 28px;
+    margin-left: 30px;
+    flex: 2;
+    max-width: 500px;
+}
+
+img.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.link-with-margin {
+    margin-bottom: 190px;
+}
+
+/* 媒体查询 */
+@media (max-width: 600px) {
+    nav.navbar {
+        padding: 10px 20px; /* 减小内边距 */
+        font-size: 1.3em; /* 减小字体 */
+        font-weight: 500;
+        letter-spacing: 0.5px; /* 设置字间距为 2 像素 */
+    }
+
+        nav.navbar .left-links {
+            margin-left: 20px; /* 增加左侧边距 */
+        }
+
+        nav.navbar .right-links {
+            margin-left: auto; /* 将中间链接推到右侧 */
+            display: flex; /* 使用flex布局 */
+            gap: 20px; /* 设置间隔 */
+        }
+
+    div.content {
+        width: 90%; /* 增加宽度以适应小屏幕 */
+        padding: 15px; /* 减小内边距 */
+    }
+
+    .content-title h1 {
+        font-size: 1.5em; /* 减小字体大小 */
+    }
+
+    .content-image {
+        margin-top: 30px;
+    }
+
+    button.rounded-button {
+        font-size: 0.9em; /* 减小字体 */
+        padding: 8px 15px; /* 减小内边距 */
+    }
+
+    img.icon {
+        width: 24px; /* 减小图标大小 */
+        height: 24px;
+    }
+
+    div.footer-left {
+        flex: 2; /* 增加左侧区域宽度 */
+        font-size: 0.8em; /* 减小字体大小 */
+    }
+
+    div.footer-right {
+        flex: 1; /* 保持右侧区域宽度 */
+    }
+}
