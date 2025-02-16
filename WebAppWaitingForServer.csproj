@@ -13,9 +13,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11" />
-    <PackageReference Include="Microsoft.Extensions.AI.Ollama" Version="9.1.0-preview.1.25064.3" />
-    <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="9.1.0-preview.1.25064.3" />
-    <PackageReference Include="Microsoft.KernelMemory.AI.Ollama" Version="0.96.250120.1" />
+    <PackageReference Include="Microsoft.Extensions.AI.Ollama" Version="8.1.0-preview.1.25064.3" />
+    <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="8.1.0-preview.1.25064.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="xUnit" Version="2.9.3" />
     <PackageReference Include="xunit.runner.visualstudio" Version="3.0.2">
